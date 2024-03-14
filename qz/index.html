@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Libid+</title>
+
+  <style type="text/css">
+    body{
+        background-color: #fff;
+    }
+
+    .faixa{
+      position: fixed;
+      width: 100%;
+    }
+
+    .faixa p {
+        height: 40px;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        background-color: #AE0000;
+        font-weight: 100;
+      }
+
+      .number {
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    .footer p{
+          font-weight: 100;
+          font-size: 12px;
+          margin: 20px auto;
+          padding: 2px 28px;
+          text-align: center;
+          margin-bottom: 1rem;
+          color: #787878;
+    }
+    .text-white {
+      font-family: "Nunito Sans", Sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-decoration: none;
+      color: #B6B6B6;
+      padding-top: 100px;
+      text-align: center;
+    }
+    .hide {
+      display: none;
+    }
+
+    .hide2 {
+      display: none;
+    }
+
+    .hide3 {
+      opacity: 0.2;
+    }
+
+    .black img{
+      max-width: 90%;
+      border-radius: 10px;
+    }
+    .headline{
+      color: #000;
+      text-align: center;
+      font-family: Oswald;"
+    }
+    .headline span{
+      color: #dd5555;
+    }
+
+    button {
+      white-space: normal;
+    }
+
+    .black * {
+        opacity: 1;
+    transition: opacity 0.1s ease-in-out; /* Reduzindo o tempo de transição */
+    }
+
+    .black.blur * {
+        opacity: 0; /* Opacidade desejada quando o efeito estiver ativo */
+    }
+
+  </style>
+
+  
+</head>
+<body> 
+  <div class="faixa">
+    <p style="font-weight:400">🟢 <span id="number" style="font-weight: 700;"></span> Mulheres respondendo esse teste...</p>
+  </div>
+  <img style="max-width: 200px; margin-top:50px" src="img/logo.png">
+  <div class="cont">
+
+    <div id="hl">
+      <h3 style="margin-bottom:10px" class="headline"><b>Recuperando a Libido de inicio de namoro em<span>21 DIAS</span> com um mapa sob medida e 100% natural.</h3>
+        <h2 style="font-family: Oswald;text-align: center;font-size: 17px;background: #AE0000;padding: 5px;border-radius: 10px;margin: 0;color: #fff;">Prepare-se, ele vai pedir socorro na cama🔥</h2>
+
+        <div style="text-align:center;margin: 30px 0;">
+          <img src="img/alunos.png">
+          <p style="margin:0">+ de 5 mil Mulheres Já conseguiram</p>
+          <div class="stars">
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+
+          </div>
+
+        </div>
+
+      <h4 style="font-size: 18px;font-style: italic;text-align: center;"><span style="font-size: 30px;">"</span>Consigo aumentar minha libido de forma natural sem usar hormonios ou remédios?"</h4>
+      <h5 style="font-size: 20px;text-align: center;font-weight: 600;color: #dd5555;">Responda esse teste gratuito de 2 minutos e saiba se você está qualificada para receber o mapa sob medida.</h5>
+    </div>
+
+    <div class="black">
+
+      <!-- Primeira Pergunta -->
+      <div id="primeira">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Qual sua faixa etária?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Isso irá determinar o estágio de maturidade física em que seu corpo se encontra.</p>
+        </div>
+        <div class="answer">
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('primeira', 'extra-01'), SomeHeadline(), scrollToDiv('extra-01')">De 18 á 30 anos
+        </button>
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('primeira', 'extra-01'), SomeHeadline(), scrollToDiv('extra-01')">De 31 á 40 anos
+        </button>
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('primeira', 'extra-01'), SomeHeadline(), scrollToDiv('extra-01')">De 41 á 50 anos
+        </button>
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('primeira', 'extra-01'), SomeHeadline(), scrollToDiv('extra-01')">Mais de 51 anos
+        </button>
+        </div>
+      </div>
+
+      <!-- Pergunta extra 01 -->
+      <div id="extra-01" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Qual dessas razões você acredita, ser a causa principal da sua falta de Libido?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Isso é para entendermos como sua rotina afeta a sua libido.</p>
+        </div>
+        <div class="answer">
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('extra-01', 'segunda'), SomeHeadline(), scrollToDiv('segunda')">Estou na menopausa, ou entrando nela.
+        </button>
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('extra-01', 'segunda'), SomeHeadline(), scrollToDiv('segunda')">Faço uso de anticoncepcional.
+        </button>
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('extra-01', 'segunda'), SomeHeadline(), scrollToDiv('segunda')">Não me alimento direito.
+        </button>
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('extra-01', 'segunda'), SomeHeadline(), scrollToDiv('segunda')">Nenhuma das alternativas. 
+        </button>
+        </div>
+      </div>
+
+      <!-- Segunda Pergunta -->
+      <div id="segunda" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Por que você acredita que precisa aumentar a sua libido?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Considere a principal razão que te faz ter a certeza de que sua libido está baixa.</p>
+        </div>
+        <div class="answer">
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('segunda', 'terceira'), scrollToDiv('terceira')">Não tenho mais desejo sexual e estou sempre estressada em todas as áreas da minha vida (Pessoal e Profissional).
+        </button>
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('segunda', 'terceira'), scrollToDiv('terceira')">Meu relacionamento está sendo prejudicado por essa minha falta de desejo sexual, tenho medo de ser traída por não corresponder.
+        </button>
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('segunda', 'terceira'), scrollToDiv('terceira')">Não consigo aproveitar os momentos da vida como eu gostaria.
+        </button>
+        <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('segunda', 'terceira'), scrollToDiv('terceira')">Me sinto bem, apenas gostaria de melhorar minha qualidade de vida.
+        </button>
+        </div>
+      </div>
+
+      <!-- terceira Pergunta -->
+      <div id="terceira" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Você acredita que atividades que antes eram prazerosas para você, hoje já não são tão interessantes?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Considere atividades de lazer e entretenimento do seu dia a dia com ir ao cinema, assistir um seriado comendo pizza, ir a um show do seu artista favorito ou fazer uma viagem</p>
+        </div>
+        <div class="answer">
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('terceira','quarta'), scrollToDiv('quarta')">
+          Sim, sinto que as coisas que eu gosto de fazer tem se tornado menos interessantes e me distraem menos do que eu gostaria.</button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('terceira','quarta'), scrollToDiv('quinta')">
+          Sim, durante as minhas atividades favoritas eu ainda continuo pensando nos meus problemas.</button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('terceira','quarta'), scrollToDiv('quinta')">
+          Não, consigo me distrair normalmente e ainda gosto muito das minhas atividades favoritas, mas hoje esses momentos não são tão bons como antes.</button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('terceira','quarta'), scrollToDiv('quinta')">
+          Não notei essa diferença.</button>
+        </div>
+      </div>
+
+
+      <!-- quarta Pergunta -->
+      <div id="quarta" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Você sente que sua autoestima pode estar sendo afetada pela falta de libido?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">A falta de libido pode levar a uma baixa considerável de autoestima</p>
+        </div>
+        <div class="answer">
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('quarta', 'quinta'), scrollToDiv('quinta')">
+          Sim, não costumo me cuidar mais como fazia antes, não me sinto bem o suficiente para isso.</button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('quarta', 'quinta'), scrollToDiv('quinta')">
+          Sim, eu ainda tento me cuidar mas minha autoestima anda muito baixa e me acho sempre feia no meio de outras mulheres.</button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('quarta', 'quinta'), scrollToDiv('quinta')">
+          Não, minha autoestima está baixa mas sempre fui assim, a libido só piorou um pouco.</button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('quarta', 'quinta'), scrollToDiv('quinta')">
+          Tenho autoestima alta, mas quero melhorar.</button>
+      </div>
+    </div>
+
+      <!-- quinta Pergunta -->
+      <div id="quinta" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Você consegue ter momentos de relaxamento completo?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Considere relaxamento um momento em que você consegue ficar tranquila, sem pensar nos problemas, aproveitando a calma total e o prazer de não fazer absolutamente nada</p>
+        </div>
+        <div class="answer">
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('quinta', 'sexta'), scrollToDiv('sexta')">
+          Não. Toda vez que tento relaxar por um momento só penso em problemas (Filhos, Marido, Trabalho, Dívidas) e uma preocupação grande na minha mente para resolve-los.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('quinta', 'sexta'), scrollToDiv('sexta')">
+          Não, na correria do dia a dia isso pra mim é impossível, mas acho que eu não conseguiria, certamente iria pensar em problemas.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('quinta', 'sexta'), scrollToDiv('sexta')">
+          Sim, consigo relaxar mais ainda penso nos problemas
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('quinta', 'sexta'), scrollToDiv('sexta')">
+          Sim, quando quero relaxar faço isso muito bem.
+          </button>
+        </div>
+      </div>
+
+      <!-- sexta Pergunta -->
+      <div id="sexta" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Quando foi a ultima vez que você sentiu um desejo sexual de verdade?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Considere qualquer situação, seja com seu parceiro ou qualquer outra pessoa, sem julgamentos aqui</p>
+        </div>
+        <div class="answer">
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('sexta', 'setima'), scrollToDiv('setima')">
+          Faz tanto tempo que nem me lembro.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('sexta', 'setima'), scrollToDiv('setima')">
+          Com certeza mais de 1 ano.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('sexta', 'setima'), scrollToDiv('setima')">
+          Menos de 1 ano, talvez alguns meses.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('sexta', 'setima'), scrollToDiv('setima')">
+          Não faz muito tempo, porém não sinto com frequência. 
+          </button>
+          
+        </div>
+      </div>
+
+      <!-- setima Pergunta -->
+      <div id="setima" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Você sente algum desconforto no seu relacionamento por causa da falta de libido?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Isso é para entendermos o grau de impacto da falta de libido na sua vida a dois</p>
+        </div>
+        <div class="answer">
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('setima', 'oitava'), scrollToDiv('oitava')">
+          Sim, estamos distantes, tenho diversos desentendimentos bobos que vão se acumulando e causando um desconforto maior entre nós.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('setima', 'oitava'), scrollToDiv('oitava')">
+          Sim, não temos uma conexão sexual como antes. Momentos que eram pra ser gostosos entre nós se tornam um caos por causa do nosso estresse. Não temos diálogo.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('setima', 'oitava'), scrollToDiv('oitava')">
+          Não, mesmo com redução na minha libido meu relacionamento ainda é bom, mas não é como antes, preciso melhorar.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('setima', 'oitava'), scrollToDiv('oitava')">
+          Não estou em um relacionamento.
+          </button>
+        </div>
+      </div>
+
+      <!-- oitava Pergunta -->
+      <div id="oitava" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Como você acha que a sua falta de libido pode afetar suas relações com as pessoas ao seu redor?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Como você acredita que isso influencia a forma como os outros te percebem, te olham ou conversam com você?</p>
+        </div>
+        <div class="answer">
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('oitava', 'nona'), scrollToDiv('nona')">
+          Acho que meu parceiro pensa que eu não gosto mais dele. Quando na verdade eu só não tenho desejo por ele com antes. Mas ainda o amo.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('oitava', 'nona'), scrollToDiv('nona')">
+          Acho que as pessoas pensam que fiquei mais fechada, quando na verdade é só o estresse e a pressão mental que não me deixam aproveitar os momentos da vida.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('oitava', 'nona'), scrollToDiv('nona')">
+          Tento sempre parecer bem, mas em vários momentos fico de mal humor e introvertida. Acho que isso pode afastar as pessoas de mim.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('oitava', 'nona'), scrollToDiv('nona')">
+          Não tenho esse tipo de percepção, as pessoas me veem normalmente, Tento sempre ser sociável e não deixar essa condição me afetar.
+          </button>
+        </div>
+      </div>
+
+      <!-- nona Pergunta -->
+      <div id="nona" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Você percebe sintomas físicos, como fadiga ou dores associados à diminuição da libido?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Quadros mais severos de falta de libido podem apresentar problemas físicos e/ou mentais.</p>
+        </div>
+        <div class="answer">
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('nona', 'extra-02'), scrollToDiv('extra-02')">
+          Sim, tenho sinto dores que podem estar relacionadas á libido.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('nona', 'extra-02'), scrollToDiv('extra-02')">
+          Sim, sinto fadiga durante boa parte do meu dia.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('nona', 'extra-02'), scrollToDiv('extra-02')">
+          Sim, sinto dores e também fadiga.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('nona', 'extra-02'), scrollToDiv('extra-02')">
+          Não tenho essa percepção.
+          </button>        
+        </div>
+      </div>
+
+      <!-- pergunta-extra-2 -->
+      <div id="extra-02" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>Você percebe sintomas de saúde mental comprometida como ansiedade ou depressão, associados à diminuição da libido?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Quadros mais severos de falta de libido podem apresentar problemas físicos e/ou mentais.</p>
+        </div>
+        <div class="answer">
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('extra-02', 'ultima'), scrollToDiv('ultima')">
+          Sim, sofro de ansiedade.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('extra-02', 'ultima'), scrollToDiv('ultima')">
+          Sim, sofro de depressão.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('extra-02', 'ultima'), scrollToDiv('ultima')">
+          Não sou diagnosticada com esses problemas mas acredito que posso sofrer de alguns deles.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="blurEffect(), trocarElemento('extra-02', 'ultima'), scrollToDiv('ultima')">
+          Não tenho esses problemas.
+          </button>        
+        </div>
+      </div>
+
+      <!-- Ultima Pergunta -->
+      <div id="ultima" class="hide">
+        <h1 id="responda">Responda:</h1>
+        <div class="question">
+        <p>O que mais te deixa com medo em saber que sua libido está baixa?</p>
+        <p style="font-size: 13px;line-height: 15px;font-weight: 400;color: #5d5d5d;">Isso é para entendermos o seu grau de preocupação em relação a esse problema.</p>
+        </div>
+        <div class="answer">
+          <button style="white-space: normal;" class="btn" onclick="delay(), scrollToDiv('contBarra')">
+          Tenho medo de ser traída a qualquer momento por não corresponder aos desejos do meu parceiro.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="delay(), scrollToDiv('contBarra')">
+          Tenho medo de precisar tomar hormônios para resolver esse problema.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="delay(), scrollToDiv('contBarra')">
+          Tenho medo de não aproveitar mais os prazeres da vida por estar sempre estressada e preocupada.
+          </button>
+          <button style="white-space: normal;" class="btn" onclick="delay(), scrollToDiv('contBarra')">
+          Tenho medo de não ser mais interessante para os homens e parmanecer assim pro resto da vida.
+          </button>
+
+        </div>
+      </div>
+
+        <div id="contBarra" class="hide2">
+          <div id="progressbar">
+           <span id="loading"></span>
+          <div id="load" class="troca">Analisando suas respostas...</div>
+          <div id="title">Um momento!</div>
+          </div>          
+        </div>
+      </div>
+
+    </div>
+    <!-- Termos de Uso e Política de Privacidade -->
+    <div style="opacity: 0;" class="footer">
+    <div class="text-white mt-4">Termos de Uso | Política de Privacidade</div>
+        <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.  Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas e resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais fazemos nenhum tipo de spam. Sinta-se à vontade para falar conosco em horário comercial de Segunda a Sextas das 09h00 às 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.</p>
+    </div>
+    <p style="text-align: center; color: #B6B6B6; font-weight: bold; font-size: 16px;">Libid+ © 2024 – Todos os direitos reservados.</p>
+
+  </div>
+  <script type="text/javascript">
+    //perguntas
+    function SomeHeadline() {
+      document.getElementById("hl").classList.add("hide3")
+    };
+
+
+    function trocarElemento (elementoAtual, proximoElemento) {
+      document.getElementById(elementoAtual).classList.add("hide");
+      document.getElementById(proximoElemento).classList.remove("hide");
+    }
+
+    function barra() {
+      document.getElementById("ultima").classList.add("hide");
+      document.getElementById("contBarra").classList.remove("hide2");
+      setTimeout(TextoUm, 3000);
+      setTimeout(TextoDois, 5000);
+    };
+
+    function redirect() {
+      location.href = "resultado.html"
+    }
+    function TextoUm(){
+      document.getElementById("load").innerHTML = "Calculando seu resultado...";
+    }
+    function TextoDois(){
+      document.getElementById("load").innerHTML = "Resultado calculado!!";
+    }
+
+    //barra de progresso
+    function delay(){
+      barra();
+      document.getElementById("responda").innerHTML = "Obrigado por responder!";
+      setInterval(redirect, 7000);
+    }
+  </script>
+
+
+  <script type="text/javascript">
+    //rolar a tela automaticamente
+    function scrollToDiv(id) {
+
+      console.log("Botão clicado:", id); // Exibir o ID do botão clicado
+      var targetDiv = document.getElementById(id);
+      console.log("Div alvo da rolagem:", targetDiv.id); // Exibir o ID da div alvo
+
+      //var targetDiv = document.getElementById(id);
+      var windowHeight = window.innerHeight;
+      var divHeight = targetDiv.offsetHeight;
+      var divTop = targetDiv.getBoundingClientRect().top + window.pageYOffset;
+      var targetPosition = divTop - (windowHeight - divHeight) / 2;
+      var startPosition = window.pageYOffset;
+      var distance = targetPosition - startPosition;
+      var duration = 500;
+      var startTime = null;
+
+      function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+        var run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      }
+
+      function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      requestAnimationFrame(animation);
+    }
+
+  </script>
+
+  <script type="text/javascript">
+    //Função de opacity na div
+    function blurEffect() {
+        var blackDiv = document.querySelector('.black');
+        blackDiv.classList.add('blur');
+        setTimeout(function() {
+            blackDiv.classList.remove('blur');
+        }, 100); // Tempo reduzido para 300 milissegundos
+    }
+
+
+  </script>
+
+  <script type="text/javascript">
+    //Pessoas Assistindo
+    function add(){number+=Math.floor((Math.random()*6)+1);document.getElementById("number").innerHTML=number;setTimeout("add()",10000);}        
+    function generate(){number=Math.floor(Math.random()*113)+158;document.getElementById("number").innerHTML=number;add();}
+    generate();    
+  </script>
+</body>
+</html>

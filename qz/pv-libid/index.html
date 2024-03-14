@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+  <head>
+    <meta charset="UTF-8">
+    <script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.html).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/index.html")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+    <title>Libid+t</title>
+
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel='dns-prefetch' href='http://connect.facebook.com/' />
+    <link rel='dns-prefetch' href='http://youtube.com/' />
+
+    <style id='wp-emoji-styles-inline-css'>
+      img.wp-smiley, img.emoji {
+      display: inline !important;
+      border: none !important;
+      box-shadow: none !important;
+      height: 1em !important;
+      width: 1em !important;
+      margin: 0 0.07em !important;
+      vertical-align: -0.1em !important;
+      background: none !important;
+      padding: 0 !important;
+      }
+    </style>
+    <style id='classic-theme-styles-inline-css'>
+      /*! This file is auto-generated */
+      .wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+    </style>
+    <style id='global-styles-inline-css'>
+      body{margin: 0;
+    font-family: "Montserrat", Sans-serif;
+    --wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+      .wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+      :where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+      :where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+      .wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+    </style>
+
+    <link rel='stylesheet' id='elementor-frontend-css' href='wp-content/plugins/elementor/assets/css/frontend-lite.minf3b2.css?ver=3.18.3' media='all' />
+    <link rel='stylesheet' id='elementor-post-7-css' href='wp-content/uploads/elementor/css/post-775db.css?ver=1703617371' media='all' />
+  
+
+    <link rel='stylesheet' id='elementor-global-css' href='wp-content/uploads/elementor/css/global2103.css?ver=1703619434' media='all' />
+    <link rel='stylesheet' id='elementor-post-12-css' href='wp-content/uploads/elementor/css/post-128c94.css?ver=1703881986' media='all' />
+    <style id='rocket-lazyload-inline-css'>
+      .rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+    </style>
+    <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.4.3' media='all' />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <meta name="generator" content="WordPress 6.4.3" />
+    <link rel="canonical" href="index.html" />
+
+    <meta name="generator" content="Elementor 3.18.3; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, block_editor_assets_optimize, e_image_loading_optimization; settings: css_print_method-external, google_font-enabled, font_display-swap">
+    <link rel="icon" href="wp-content/uploads/2023/12/cropped-icon-_green-new-energy_-32x32.jpg" sizes="32x32" />
+    <link rel="icon" href="wp-content/uploads/2023/12/cropped-icon-_green-new-energy_-192x192.jpg" sizes="192x192" />
+    <link rel="apple-touch-icon" href="wp-content/uploads/2023/12/cropped-icon-_green-new-energy_-180x180.jpg" />
+
+    <noscript>
+      <style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style>
+    </noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  </head>
+
+
+
+  <body class="page-template page-template-elementor_canvas page page-id-12 wp-custom-logo elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-12">
+    <div data-elementor-type="wp-page" data-elementor-id="12" class="elementor elementor-12" data-elementor-post-type="page">
+      <div style="background-image: url(img/bg.png);background-size: contain;background-repeat: no-repeat;background-color: #860000;" class="elementor-element elementor-element-6281a930 e-flex e-con-boxed e-con e-parent" data-id="6281a930" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div style="margin-top: 290px" class="elementor-element elementor-element-18fff992 e-con-full e-flex e-con e-child" data-id="18fff992" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+            <div class="elementor-element elementor-element-25cf6715 elementor-widget elementor-widget-heading" data-id="25cf6715" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>/*! elementor - v3.18.0 - 20-12-2023 */
+                  .elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}
+                </style>
+                <h2 style="text-shadow: 2px 2px 5px black;;" class="elementor-heading-title elementor-size-default">A Rotina Sob Medida para <span style="color:#4bed39">Recuperar o Desejo Sexual Naturalmente</span> em <span style="color:#4bed39">21 Dias</span> e fazer o boy pedir socorro na cama!</h2>
+              </div>
+            </div>
+            <div class="elementor-element elementor-element-6f1dbfce elementor-widget elementor-widget-heading" data-id="6f1dbfce" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <h2 class="elementor-heading-title elementor-size-default">Sem deixar de tomar anticoncepcional e nem precisar tomar hormônios, remédios, suplementos caros ou pílulas milagrosas que prejudicam ainda mais a sua saúde.</h2>
+              </div>
+            </div>
+            <div class="elementor-element elementor-element-5dee5c28 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5dee5c28" data-element_type="widget" data-widget_type="icon-list.default">
+              <div class="elementor-widget-container">
+                <link rel="stylesheet" href="wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">
+                <ul class="elementor-icon-list-items">
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69" fill="none">
+                        <g id="Group 17">
+                          <circle id="Ellipse 17" cx="34.5" cy="34.5" r="34.5" fill="url(#paint0_linear_11_65)"></circle>
+                          <g id="&#xF0;&#x9F;&#xA6;&#x86; icon &quot;correct&quot;">
+                            <path id="Vector" d="M10 10H60V60H10V10Z" fill="white" fill-opacity="0.01"></path>
+                            <path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.1664 35L19.3747 29.7917L29.7914 40.2083L50.6247 19.375L55.8331 24.5833L29.7914 50.625L14.1664 35Z" fill="#393939"></path>
+                          </g>
+                        </g>
+                        <defs>
+                          <linearGradient id="paint0_linear_11_65" x1="34.5" y1="0" x2="34.5" y2="69" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FFB18C"></stop>
+                            <stop offset="1" stop-color="#FF7635"></stop>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="elementor-icon-list-text">Libido poderosa</span>
+                  </li>
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69" fill="none">
+                        <g id="Group 17">
+                          <circle id="Ellipse 17" cx="34.5" cy="34.5" r="34.5" fill="url(#paint0_linear_11_65)"></circle>
+                          <g id="&#xF0;&#x9F;&#xA6;&#x86; icon &quot;correct&quot;">
+                            <path id="Vector" d="M10 10H60V60H10V10Z" fill="white" fill-opacity="0.01"></path>
+                            <path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.1664 35L19.3747 29.7917L29.7914 40.2083L50.6247 19.375L55.8331 24.5833L29.7914 50.625L14.1664 35Z" fill="#393939"></path>
+                          </g>
+                        </g>
+                        <defs>
+                          <linearGradient id="paint0_linear_11_65" x1="34.5" y1="0" x2="34.5" y2="69" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FFB18C"></stop>
+                            <stop offset="1" stop-color="#FF7635"></stop>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="elementor-icon-list-text">Aumento do desejo sexual</span>
+                  </li>
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69" fill="none">
+                        <g id="Group 17">
+                          <circle id="Ellipse 17" cx="34.5" cy="34.5" r="34.5" fill="url(#paint0_linear_11_65)"></circle>
+                          <g id="&#xF0;&#x9F;&#xA6;&#x86; icon &quot;correct&quot;">
+                            <path id="Vector" d="M10 10H60V60H10V10Z" fill="white" fill-opacity="0.01"></path>
+                            <path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.1664 35L19.3747 29.7917L29.7914 40.2083L50.6247 19.375L55.8331 24.5833L29.7914 50.625L14.1664 35Z" fill="#393939"></path>
+                          </g>
+                        </g>
+                        <defs>
+                          <linearGradient id="paint0_linear_11_65" x1="34.5" y1="0" x2="34.5" y2="69" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FFB18C"></stop>
+                            <stop offset="1" stop-color="#FF7635"></stop>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="elementor-icon-list-text">Melhora humor e disposição</span>
+                  </li>
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69" fill="none">
+                        <g id="Group 17">
+                          <circle id="Ellipse 17" cx="34.5" cy="34.5" r="34.5" fill="url(#paint0_linear_11_65)"></circle>
+                          <g id="&#xF0;&#x9F;&#xA6;&#x86; icon &quot;correct&quot;">
+                            <path id="Vector" d="M10 10H60V60H10V10Z" fill="white" fill-opacity="0.01"></path>
+                            <path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.1664 35L19.3747 29.7917L29.7914 40.2083L50.6247 19.375L55.8331 24.5833L29.7914 50.625L14.1664 35Z" fill="#393939"></path>
+                          </g>
+                        </g>
+                        <defs>
+                          <linearGradient id="paint0_linear_11_65" x1="34.5" y1="0" x2="34.5" y2="69" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FFB18C"></stop>
+                            <stop offset="1" stop-color="#FF7635"></stop>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="elementor-icon-list-text">Redução nos sintomas da menopausa</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="elementor-element elementor-element-4a4d2b5b elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="4a4d2b5b" data-element_type="widget" data-widget_type="button.default">
+              <div class="elementor-widget-container">
+                <div class="elementor-button-wrapper">
+                  <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                  <span class="elementor-button-content-wrapper">
+                  <span class="elementor-button-text">COMPRAR AGORA</span>
+                  </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Sessão do Grafico -->
+      <div class="elementor-element elementor-element-322ac85b e-flex e-con-boxed e-con e-parent" data-id="322ac85b" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-5116995 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="5116995" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">DE ACORDO COM SUAS RESPOSTAS NO TESTE...
+                
+              </h2>
+              <br>
+              <h2 class="elementor-heading-title elementor-size-default" style="font-size: 19px;font-weight: 400;">Começando HOJE mesmo, estes serão os seus resultado em <b>21 dias<br><br><span style="color:#C81B00">Com Libid+</span> e <span style="color:#808080">Sem Libid+</span></b></h2>
+
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-162eb606 e-flex e-con-boxed e-con e-child" data-id="162eb606" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              <div class="elementor-element elementor-element-15a8a72e e-con-full e-flex e-con e-child" data-id="15a8a72e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-5a8d45cf elementor-position-top elementor-widget elementor-widget-image-box" data-id="5a8d45cf" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <img src="img/grafico.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-6f800f52 elementor-align-center elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="6f800f52" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">A PROXIMA SOU EU</span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIM GRAFICO -->
+
+      <!-- TOPICOS -->
+      <div class="elementor-element elementor-element-19b1b173 e-flex e-con-boxed e-con e-parent" data-id="19b1b173" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-2980c215 elementor-widget elementor-widget-heading" data-id="2980c215" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-6f6719fc e-flex e-con-boxed e-con e-child" data-id="6f6719fc" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              <div class="elementor-element elementor-element-15ca7f36 e-con-full e-flex e-con e-child" data-id="15ca7f36" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-1fe8775 elementor-position-top elementor-widget elementor-widget-image-box" data-id="1fe8775" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <style>/*! elementor - v3.18.0 - 20-12-2023 */
+                      .elementor-widget-image-box .elementor-image-box-content{width:100%}@media (min-width:768px){.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper,.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{display:flex}.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{text-align:right;flex-direction:row-reverse}.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper{text-align:left;flex-direction:row}.elementor-widget-image-box.elementor-position-top .elementor-image-box-img{margin:auto}.elementor-widget-image-box.elementor-vertical-align-top .elementor-image-box-wrapper{align-items:flex-start}.elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper{align-items:center}.elementor-widget-image-box.elementor-vertical-align-bottom .elementor-image-box-wrapper{align-items:flex-end}}@media (max-width:767px){.elementor-widget-image-box .elementor-image-box-img{margin-left:auto!important;margin-right:auto!important;margin-bottom:15px}}.elementor-widget-image-box .elementor-image-box-img{display:inline-block}.elementor-widget-image-box .elementor-image-box-title a{color:inherit}.elementor-widget-image-box .elementor-image-box-wrapper{text-align:center}.elementor-widget-image-box .elementor-image-box-description{margin:0}
+                    </style>
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img decoding="async" width="113" height="113" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20113%20113'%3E%3C/svg%3E" class="attachment-full size-full wp-image-17" alt="" data-lazy-src="https://labopt.fengilib.fun/wp-content/uploads/2023/12/icon-_green-new-energy_.svg" />
+                        <noscript><img decoding="async" width="113" height="113" src="https://labopt.fengilib.fun/wp-content/uploads/2023/12/icon-_green-new-energy_.svg" class="attachment-full size-full wp-image-17" alt="" /></noscript>
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Das mais de 5 mil mulheres que responderam o nosso teste</h3>
+                        <p class="elementor-image-box-description">92% tiveram sua libido completamente restaurada após seguirem o passo a passo da rotina natural Libid+. Elas conquistaram um relacionamento mais forte com seus parceiros, uma vida sexual mais ativa e prazerosa e um dia a dia com menos estresse.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="elementor-element elementor-element-56fcea12 e-con-full e-flex e-con e-child" data-id="56fcea12" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-4d5fa7d9 elementor-position-top elementor-widget elementor-widget-image-box" data-id="4d5fa7d9" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img decoding="async" width="113" height="113" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20113%20113'%3E%3C/svg%3E" class="attachment-full size-full wp-image-18" alt="" data-lazy-src="https://labopt.fengilib.fun/wp-content/uploads/2023/12/icon-_fire_-1.svg" />
+                        <noscript><img decoding="async" width="113" height="113" src="https://labopt.fengilib.fun/wp-content/uploads/2023/12/icon-_fire_-1.svg" class="attachment-full size-full wp-image-18" alt="" /></noscript>
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Não ter um desejo sexual ardente não é sua culpa.</h3>
+                        <p class="elementor-image-box-description">Trata-se de um comportamento comum do seu corpo quando algumas coisas estão desalinhadas. Comece o  Libid+ hoje e restaure totalmente sua vontade por sexo dexando seu parceiro sem entender nada.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-93b018d e-flex e-con-boxed e-con e-child" data-id="93b018d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              <div class="elementor-element elementor-element-51f818e2 e-con-full e-flex e-con e-child" data-id="51f818e2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-50fb8637 elementor-position-top elementor-widget elementor-widget-image-box" data-id="50fb8637" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img decoding="async" width="113" height="113" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20113%20113'%3E%3C/svg%3E" class="attachment-full size-full wp-image-19" alt="" data-lazy-src="https://labopt.fengilib.fun/wp-content/uploads/2023/12/icon-_emotion-happy_.svg" />
+                        <noscript><img loading="lazy" decoding="async" width="113" height="113" src="https://labopt.fengilib.fun/wp-content/uploads/2023/12/icon-_emotion-happy_.svg" class="attachment-full size-full wp-image-19" alt="" /></noscript>
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Libid+ Deixa tudo mais fácil</h3>
+                        <p class="elementor-image-box-description">Ao contrário do que muitos falam, recuperar a libido não é algo simples. Porém, com um método comprovado e direto ao ponto que já ajudou milhares de mulheres a recuperar uma vida com mais confiança e vitalidade fica tudo mais fácil.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-2efa17a1 elementor-align-center elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="2efa17a1" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">Quero transformar minha vida!</span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        
+        <div class="elementor-element elementor-element-2587eda6 elementor-align-center elementor-mobile-align-justify elementor-hidden-desktop elementor-widget elementor-widget-button" data-id="2587eda6" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">QUERO ACESSAR AGORA </span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+      <!-- FIM DOS TÓPICOS -->
+
+      <!-- DEPOIMENTOS 1 -->
+      <div class="elementor-element elementor-element-322ac85b e-flex e-con-boxed e-con e-parent" data-id="322ac85b" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-5116995 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="5116995" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">RESULTADOS COMPROVADOS POR MILHARES DE CLIENTES!
+                
+              </h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-162eb606 e-flex e-con-boxed e-con e-child" data-id="162eb606" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              <div class="elementor-element elementor-element-15a8a72e e-con-full e-flex e-con e-child" data-id="15a8a72e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-5a8d45cf elementor-position-top elementor-widget elementor-widget-image-box" data-id="5a8d45cf" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/dep-01.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Maria Oliveira</h3>
+                        <p class="elementor-image-box-description">"Essa Rotina ressucitou minha vida íntima. Recuperei a intimidade com o meu marido que era o que eu mais me preocupava e nosso relacionamento esta muito mais seguro. Até a minha confiança como mulher voltou."</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="elementor-element elementor-element-62321885 e-con-full e-flex e-con e-child" data-id="62321885" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-41808961 elementor-position-top elementor-widget elementor-widget-image-box" data-id="41808961" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/dep-02.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Juliana Santos</h3>
+                        <p class="elementor-image-box-description">"Eu já não tinha vontade nenhuma de fazer sexo e fazia uns longos anos que isso estava acontecendo comigo. Sei que foi por causa da menopausa mas essa rotina +Libid tem me ajudado muito a ter vontade novamente. Eu já nem lembrava como era bom rsrsr"</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-74981fab e-flex e-con-boxed e-con e-child" data-id="74981fab" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              
+              <div class="elementor-element elementor-element-72d3e71 e-con-full e-flex e-con e-child" data-id="72d3e71" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-56d9288b elementor-position-top elementor-widget elementor-widget-image-box" data-id="56d9288b" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/dep-03.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Amanda Lima</h3>
+                        <p class="elementor-image-box-description">"Eu comecei o libid+ porque meu anticoncepcional estava prejudicando demais a minha saude sexual. Quando comecei até pensei que não tinha nenhuma chance de funcionar pq é muito fácil mesmo o passo a passo, me surpreendeu bastante. Hoje tenho muito mais momentos com meu marido e sei que não tem nenhuma chance dele se enrrolar com outra mulher por causa disso."</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-6f800f52 elementor-align-center elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="6f800f52" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">A PROXIMA SOU EU</span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DEPOIMENTOS 1 -->
+
+      <!-- PROVAS -->
+      <div class="elementor-element elementor-element-39c8a77d e-flex e-con-boxed e-con e-parent" data-id="39c8a77d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-23881c23 elementor-widget elementor-widget-heading" data-id="23881c23" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">⚠️<br><br>NÃO DEIXE ISSO ACONTECER COM VOCÊ!</h2><br>
+              <h2 class="elementor-heading-title elementor-size-default" style="font-size:19px;font-weight: 400;">Estudos mostram que um dos principais motivos da separação entre casais no mundo é a falta de desejo sexual.</h2><br>
+              <h2 class="elementor-heading-title elementor-size-default" style="color: #FE8C57;">Fato que algumas dessas notícias comprovam.</h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-45ff1e6a elementor-widget elementor-widget-heading" data-id="45ff1e6a" data-element_type="widget" data-widget_type="heading.default">
+            
+          </div>
+          <div class="elementor-element elementor-element-11dd5120 e-flex e-con-boxed e-con e-child" data-id="11dd5120" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              <div style="padding:0" class="elementor-element elementor-element-23d86766 e-con-full e-flex e-con e-child" data-id="23d86766" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+
+                <img style="border-radius: 20px;" src="img/noticia01.png">
+
+              </div>
+              <div style="padding:0" class="elementor-element elementor-element-23d86766 e-con-full e-flex e-con e-child" data-id="23d86766" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+
+                <img style="border-radius: 20px;" src="img/noticia02.png">
+
+              </div>
+              <div style="padding:0" class="elementor-element elementor-element-23d86766 e-con-full e-flex e-con e-child" data-id="23d86766" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+
+                <img style="border-radius: 20px;" src="img/noticia03.png">
+
+              </div>
+              
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-3e8d08d5 e-flex e-con-boxed e-con e-child" data-id="3e8d08d5" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-f75189 elementor-align-center elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="f75189" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">Quero o Fengilib agora!</span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DAS POVAS -->
+
+      <!-- DEPOIMENTOS 2 
+      <div class="elementor-element elementor-element-322ac85b e-flex e-con-boxed e-con e-parent" data-id="322ac85b" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-5116995 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="5116995" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">Um relacionamento com mais desejo sexual é um relacionamento mais forte!
+                
+              </h2>
+              <br>
+              <h2 class="elementor-heading-title elementor-size-default" style="font-size: 19px;font-weight: 400;">Veja mais alguns casos de outras mulheres que estavam com a libido muito baixa assim como você</h2>
+
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-162eb606 e-flex e-con-boxed e-con e-child" data-id="162eb606" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+
+              <div style="background-image: linear-gradient(45deg, white, transparent);" class="elementor-element elementor-element-15a8a72e e-con-full e-flex e-con e-child" data-id="15a8a72e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-5a8d45cf elementor-position-top elementor-widget elementor-widget-image-box" data-id="5a8d45cf" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <img style="border-radius:10px; box-shadow: 0px 0px 24px 1px rgba(255 75 0);" src="img/prova1.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background-image: linear-gradient(45deg, white, transparent);" class="elementor-element elementor-element-15a8a72e e-con-full e-flex e-con e-child" data-id="15a8a72e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-5a8d45cf elementor-position-top elementor-widget elementor-widget-image-box" data-id="5a8d45cf" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <img style="border-radius:10px; box-shadow: 0px 0px 24px 1px rgba(255 75 0);" src="img/prova1.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background-image: linear-gradient(45deg, white, transparent);" class="elementor-element elementor-element-15a8a72e e-con-full e-flex e-con e-child" data-id="15a8a72e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-5a8d45cf elementor-position-top elementor-widget elementor-widget-image-box" data-id="5a8d45cf" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <img style="border-radius:10px; box-shadow: 0px 0px 24px 1px rgba(255 75 0);" src="img/prova1.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-6f800f52 elementor-align-center elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="6f800f52" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">A PROXIMA SOU EU</span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       FIM DEPOIMENTOS 2 -->
+
+      <!-- TOPICOS 2 -->
+      <div class="elementor-element elementor-element-19b1b173 e-flex e-con-boxed e-con e-parent" data-id="19b1b173" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-2980c215 elementor-widget elementor-widget-heading" data-id="2980c215" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default"><span style="color:#FE8C57">Com a Rotina Natural Libid+</SPAN> Seu parceiro vai perceber a diferença em poucos dias.</h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-6f6719fc e-flex e-con-boxed e-con e-child" data-id="6f6719fc" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              <div class="elementor-element elementor-element-15ca7f36 e-con-full e-flex e-con e-child" data-id="15ca7f36" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-1fe8775 elementor-position-top elementor-widget elementor-widget-image-box" data-id="1fe8775" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <style>/*! elementor - v3.18.0 - 20-12-2023 */
+                      .elementor-widget-image-box .elementor-image-box-content{width:100%}@media (min-width:768px){.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper,.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{display:flex}.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{text-align:right;flex-direction:row-reverse}.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper{text-align:left;flex-direction:row}.elementor-widget-image-box.elementor-position-top .elementor-image-box-img{margin:auto}.elementor-widget-image-box.elementor-vertical-align-top .elementor-image-box-wrapper{align-items:flex-start}.elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper{align-items:center}.elementor-widget-image-box.elementor-vertical-align-bottom .elementor-image-box-wrapper{align-items:flex-end}}@media (max-width:767px){.elementor-widget-image-box .elementor-image-box-img{margin-left:auto!important;margin-right:auto!important;margin-bottom:15px}}.elementor-widget-image-box .elementor-image-box-img{display:inline-block}.elementor-widget-image-box .elementor-image-box-title a{color:inherit}.elementor-widget-image-box .elementor-image-box-wrapper{text-align:center}.elementor-widget-image-box .elementor-image-box-description{margin:0}
+                    </style>
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/check-01.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Chega de se preocupar pensando que ele vai atrás de outra mulher.</h3>
+                        <!--<p class="elementor-image-box-description">92% tiveram sua libido completamente restaurada após seguirem o passo a passo do mapa Libid+. Elas conquistaram um relacionamento mais forte com seus parceiros, uma vida sexual mais ativa e prazerosa e um dia a dia com menos estresse.</p>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="elementor-element elementor-element-56fcea12 e-con-full e-flex e-con e-child" data-id="56fcea12" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-4d5fa7d9 elementor-position-top elementor-widget elementor-widget-image-box" data-id="4d5fa7d9" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/check-01.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Desfrute de uma libido alta e um desejo sexual constante</h3>
+                        <!-- <p class="elementor-image-box-description">Isso não é sua culpa, trata-se de um comportamento comum do seu corpo quando algumas coisas estão desalinhadas. Comece o mapa Libid+ hoje e restaure totalmente sua vontade por sexo dexando seu parceiro sem entender nada.</p>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="elementor-element elementor-element-56fcea12 e-con-full e-flex e-con e-child" data-id="56fcea12" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-4d5fa7d9 elementor-position-top elementor-widget elementor-widget-image-box" data-id="4d5fa7d9" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/check-01.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Tenha seu marido louco por você e te desejando como a muito tempo você não via.</h3>
+                        <!-- <p class="elementor-image-box-description">Isso não é sua culpa, trata-se de um comportamento comum do seu corpo quando algumas coisas estão desalinhadas. Comece o mapa Libid+ hoje e restaure totalmente sua vontade por sexo dexando seu parceiro sem entender nada.</p>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="elementor-element elementor-element-56fcea12 e-con-full e-flex e-con e-child" data-id="56fcea12" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-4d5fa7d9 elementor-position-top elementor-widget elementor-widget-image-box" data-id="4d5fa7d9" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/check-01.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Diga adeus aos dias de puro estresse.</h3>
+                        <!-- <p class="elementor-image-box-description">Isso não é sua culpa, trata-se de um comportamento comum do seu corpo quando algumas coisas estão desalinhadas. Comece o mapa Libid+ hoje e restaure totalmente sua vontade por sexo dexando seu parceiro sem entender nada.</p>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="elementor-element elementor-element-93b018d e-flex e-con-boxed e-con e-child" data-id="93b018d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              <div class="elementor-element elementor-element-51f818e2 e-con-full e-flex e-con e-child" data-id="51f818e2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-50fb8637 elementor-position-top elementor-widget elementor-widget-image-box" data-id="50fb8637" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/check-01.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Sinta-se mais confiante com autoestima renovada</h3>
+                        <!-- <p class="elementor-image-box-description">Ao contrário do que muitos falam, recuperar a libido não é algo simples. Porém, com um método comprovado e direto ao ponto que já ajudou milhares de mulheres a recuperar uma vida com mais confiança e vitalidade fica tudo mais fácil.</p>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+
+          <div class="elementor-element elementor-element-93b018d e-flex e-con-boxed e-con e-child" data-id="93b018d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              <div class="elementor-element elementor-element-51f818e2 e-con-full e-flex e-con e-child" data-id="51f818e2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-50fb8637 elementor-position-top elementor-widget elementor-widget-image-box" data-id="50fb8637" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/check-01.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">Chega de gastar dinheiro com suplementos que não te ajudam</h3>
+                        <!--<p class="elementor-image-box-description">Ao contrário do que muitos falam, recuperar a libido não é algo simples. Porém, com um método comprovado e direto ao ponto que já ajudou milhares de mulheres a recuperar uma vida com mais confiança e vitalidade fica tudo mais fácil.</p>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+
+          
+
+          <div class="elementor-element elementor-element-2efa17a1 elementor-align-center elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="2efa17a1" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">Quero transformar minha vida!</span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        
+        <div class="elementor-element elementor-element-2587eda6 elementor-align-center elementor-mobile-align-justify elementor-hidden-desktop elementor-widget elementor-widget-button" data-id="2587eda6" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">QUERO ACESSAR AGORA </span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+      <!-- FIM DOS TÓPICOS 2 -->
+
+      <!-- PROBLEMAS -->
+      <div class="elementor-element elementor-element-322ac85b e-flex e-con-boxed e-con e-parent" data-id="322ac85b" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-5116995 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="5116995" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+            	<img src="img/alerta.png">
+              <h2 class="elementor-heading-title elementor-size-default">A baixa libido em mulheres acontece quase sempre por 3 fatores:
+                
+              </h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-162eb606 e-flex e-con-boxed e-con e-child" data-id="162eb606" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+
+              <div class="elementor-element elementor-element-15a8a72e e-con-full e-flex e-con e-child" data-id="15a8a72e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-5a8d45cf elementor-position-top elementor-widget elementor-widget-image-box" data-id="5a8d45cf" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/problema-1.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 style="font-weight: 800;font-size: 25px;color: #490000;" class="elementor-image-box-title">1 - Pré menopausa ou Menopausa.</h3>
+                        <p class="elementor-image-box-description">A maioria das mulheres enfrentam ou vão enfrentar o período de menopausa. Durante a menopausa, mudanças hormonais e físicas podem resultar em uma diminuição do desejo sexual.<br><br>A Rotina Natural Libid+ vai reequilibrar os hormonios necessarios para que a sua libido reapareça de forma rápida e saudável.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="elementor-element elementor-element-15a8a72e e-con-full e-flex e-con e-child" data-id="15a8a72e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-5a8d45cf elementor-position-top elementor-widget elementor-widget-image-box" data-id="5a8d45cf" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/problema-2.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 style="font-weight: 800;font-size: 25px;color: #490000;" class="elementor-image-box-title">2- Fatores psicológicos externos.</h3>
+                        <p class="elementor-image-box-description">Fatores psicológicos, como estresse e preocupações com filhos, marido, dívidas e a vida de modo geral também desempenham um papel importante no aumento dessa condição de baixa Libido. Condição essa que se não for tratada logo pode acarretar em problemas psicológicos mais graves como ansiedade e até depressão.<br><br>Fatores psicologicos também são abordado em uma das 3 etapas da Rotina Natural Libid+ ele será capaz de deixar sua mente preparada para qualquer situação garantindo uma libido que você nunca viu antes.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="elementor-element elementor-element-15a8a72e e-con-full e-flex e-con e-child" data-id="15a8a72e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-5a8d45cf elementor-position-top elementor-widget elementor-widget-image-box" data-id="5a8d45cf" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/problema-3.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 style="font-weight: 800;font-size: 25px;color: #490000;" class="elementor-image-box-title">3 - Uso de anticoncepcional.</h3>
+                        <p class="elementor-image-box-description">Métodos contraceptivos comuns entre as mulheres no Brasil reduzem os níveis de produção dos hormonios do prazer no seu corpo.<br><br>A Rotina Natural Libid+ será capaz de aumentar esse produção dos hormonios do prazer em até 300% apenas na primeira semana, isso é a chave para uma Libido muitoa mais alta.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="elementor-element elementor-element-6f800f52 elementor-align-center elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="6f800f52" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">A PROXIMA SOU EU</span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIM PROBLEMAS -->
+
+      <!-- PASSOS + BENEFÍCIOS (3 passos) -->
+      <div class="elementor-element elementor-element-19b1b173 e-flex e-con-boxed e-con e-parent" data-id="19b1b173" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-2980c215 elementor-widget elementor-widget-heading" data-id="2980c215" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">A Rotina Natural Libid+ é dividido em <span style="color:#FE8C57">3 escalas simples. </SPAN>Veja tudo o que você terá acesso:</h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-6f6719fc e-flex e-con-boxed e-con e-child" data-id="6f6719fc" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              <div class="elementor-element elementor-element-15ca7f36 e-con-full e-flex e-con e-child" data-id="15ca7f36" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-1fe8775 elementor-position-top elementor-widget elementor-widget-image-box" data-id="1fe8775" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <style>/*! elementor - v3.18.0 - 20-12-2023 */
+                      .elementor-widget-image-box .elementor-image-box-content{width:100%}@media (min-width:768px){.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper,.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{display:flex}.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{text-align:right;flex-direction:row-reverse}.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper{text-align:left;flex-direction:row}.elementor-widget-image-box.elementor-position-top .elementor-image-box-img{margin:auto}.elementor-widget-image-box.elementor-vertical-align-top .elementor-image-box-wrapper{align-items:flex-start}.elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper{align-items:center}.elementor-widget-image-box.elementor-vertical-align-bottom .elementor-image-box-wrapper{align-items:flex-end}}@media (max-width:767px){.elementor-widget-image-box .elementor-image-box-img{margin-left:auto!important;margin-right:auto!important;margin-bottom:15px}}.elementor-widget-image-box .elementor-image-box-img{display:inline-block}.elementor-widget-image-box .elementor-image-box-title a{color:inherit}.elementor-widget-image-box .elementor-image-box-wrapper{text-align:center}.elementor-widget-image-box .elementor-image-box-description{margin:0}
+                    </style>
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/01.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">ROTINA ALIMENTAR</h3>
+                        <p class="elementor-image-box-description"><b>Primeiramente não se preocupe, você não vai precisar entrar em nenhuma dieta restritiva ou comprar suplementos caros para ter resultados. </b><br><br>Diferente de tudo o que você já viu no youtube e na TV, Nesta etapa você vai ter uma revisão de tudo o que você ingere que prejudica a sua libido. E o que você deve incluir na sua alimentação para que esse problema seja resolvido em 21 dias, é um passo a passo simples mostrando do dia 01 ao dia 21 o que vai ser necessario para uma restauração completa da Libido. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="elementor-element elementor-element-56fcea12 e-con-full e-flex e-con e-child" data-id="56fcea12" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-4d5fa7d9 elementor-position-top elementor-widget elementor-widget-image-box" data-id="4d5fa7d9" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/02.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">ROTINA FÍSICO</h3>
+                        <p class="elementor-image-box-description"><b>Não se assuste, essa rotina NÃO inclui treinos exaustivos e tediosos na academia. </b><br><br>Aqui vamos abordar algumas práticas importantes fisicamente para aumentar a produção de algumas substâncias naturais chave que estão em falta no seu corpo atualmente. essa etapa inclui práticas que você não encontra em nenhum outro lugar da internet. Essas substâncias naturais são essenciais para o aumento da libido feminina. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="elementor-element elementor-element-93b018d e-flex e-con-boxed e-con e-child" data-id="93b018d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+              <div class="elementor-element elementor-element-51f818e2 e-con-full e-flex e-con e-child" data-id="51f818e2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-element elementor-element-50fb8637 elementor-position-top elementor-widget elementor-widget-image-box" data-id="50fb8637" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                        <img src="img/03.png">
+                      </figure>
+                      <div class="elementor-image-box-content">
+                        <h3 class="elementor-image-box-title">ROTINA PSICOLÓGICO</h3>
+                        <p class="elementor-image-box-description">Muitas mulheres não levam em consideração a parte mental quando falamos de libido. Porém talvez esse seja o cuidado mais importante, e você vai aprender aqui, quais situações você deve melhorar e quais você deve evitar a fim de aumentar o libido. <b>São situações muito simples no dia a dia</b> que no momento em que você se deparar com elas novamente você vai reconhecê-las na hora e vai saber como agir colocando como prioridade a sua saúde sexual.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+
+          <div class="elementor-element elementor-element-2efa17a1 elementor-align-center elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="2efa17a1" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">Quero transformar minha vida!</span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        
+        <div class="elementor-element elementor-element-2587eda6 elementor-align-center elementor-mobile-align-justify elementor-hidden-desktop elementor-widget elementor-widget-button" data-id="2587eda6" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">QUERO ACESSAR AGORA </span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+      <!-- FIM PASSOS + BENEFÍCIOS (3 passos) -->
+
+      <!-- BÔNUS -->
+      <div class="elementor-element elementor-element-322ac85b e-flex e-con-boxed e-con e-parent" data-id="322ac85b" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+      	<div class="elementor-element elementor-element-5116995 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="5116995" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">LIBERANDO SEU ACESSO AGORA VOCÊ VAI <span style="color: #FE8C57;"> GANHAR 100% GRÁTIS:</span>
+                
+              </h2>
+            </div>
+          </div>
+
+      	<div style="margin: 20px auto;color: #fff;text-align: center;">
+      		<img style="border-top-left-radius: 20px;border-top-right-radius: 20px;" src="img/bonus-1.png">
+      		<div style="background-image: linear-gradient(23deg, #000000 0%, #5d5d5d 100%); padding: 15px 10px;margin-top: -7px;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
+      			<h2 style="font-family: 'Montserrat', Sans-serif;font-weight: 700;font-size: 25px;">Bônus 1:<br><span style="color: #ff641c;">As 5 receitas Proibidas</span></h2>
+
+      			<p style="font-weight:500">Com essas receitas afrodisíacas você tera uma dose extra de libido. São receitas simples que você encontra os ingredientes em qualquer esquina. Essas receitas vão funcionar como uma dose extra de Libido que você pode preparar a qualquer momento.</p>
+
+      			<h3 style="font-family: 'Montserrat', Sans-serif;font-weight: 700;font-size: 20px;border-top: 1px solid white;padding-top: 15px;">Esse bônus é vendido separadamente por <span style="color:red;">R$19,90</span> Mas hoje  ele será seu por:<br><span style="color: lime;font-size: 30px;">R$ 0,00</span></h3>
+      		</div>
+      	</div>
+
+      	<div style="margin: 20px auto;color: #fff;text-align: center;">
+      		<img style="border-top-left-radius: 20px;border-top-right-radius: 20px;" src="img/bonus-2.png">
+      		<div style="background-image: linear-gradient(23deg, #000000 0%, #5d5d5d 100%); padding: 15px 10px;margin-top: -7px;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
+      			<h2 style="font-family: 'Montserrat', Sans-serif;font-weight: 700;font-size: 25px;">Bônus 2:<br><span style="color: #ff641c;">A massagem de Cleópatra</span></h2>
+
+      			<p style="font-weight:500">Você vai ter acesso a 3 técnicas de massagem secretas usadas por Cleópatra para conquistar seus homens no antigo Egito. Você  vai deixar seu parceiro louco de tesão somente nas preliminares. Mas Use com <b>Cuidado</b>, alguns homens podem queimar a largada somente com esse bônus.</p>
+
+      			<h3 style="font-family: 'Montserrat', Sans-serif;font-weight: 700;font-size: 20px;border-top: 1px solid white;padding-top: 15px;">Esse bônus é vendido separadamente por <span style="color:red;">R$59,90</span> Mas hoje  ele será seu por:<br><span style="color: lime;font-size: 30px;">R$ 0,00</span></h3>
+      		</div>
+      	</div>
+
+      	<div style="margin: 20px auto;color: #fff;text-align: center;">
+      		<img style="border-top-left-radius: 20px;border-top-right-radius: 20px;" src="img/bonus-3.png">
+      		<div style="background-image: linear-gradient(23deg, #000000 0%, #5d5d5d 100%); padding: 15px 10px;margin-top: -7px;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
+      			<h2 style="font-family: 'Montserrat', Sans-serif;font-weight: 700;font-size: 25px;">Bônus 3:<br><span style="color: #ff641c;">A Arte da Conexão</span></h2>
+
+      			<p style="font-weight:500">Descubra os segredos para construir relacionamentos fortes e duradouros. Esta cartilha prática oferece insights poderosos e estratégias comprovadas para fortalecer os laços emocionais, cultivar a intimidade e superar desafios mesmo após vários anos de relacionamento, permitindo que você e seu parceiro construam uma base sólida para um amor verdadeiro e duradouro.</p>
+
+      			<h3 style="font-family: 'Montserrat', Sans-serif;font-weight: 700;font-size: 20px;border-top: 1px solid white;padding-top: 15px;">Esse bônus é vendido separadamente por <span style="color:red;">R$79,90</span> Mas hoje  ele será seu por:<br><span style="color: lime;font-size: 30px;">R$ 0,00</span></h3>
+      		</div>
+      	</div>
+      </div>
+      <!-- FIM DOS BÔNUS -->
+
+      <!-- VANTAGENS DO PRODUTO -->
+      <div class="elementor-element elementor-element-19b1b173 e-flex e-con-boxed e-con e-parent" data-id="19b1b173" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-2980c215 elementor-widget elementor-widget-heading" data-id="2980c215" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">o que você ganha começando com a <span style="color:#FE8C57">Rotina Natural Libid+</SPAN> hoje?</h2>
+          	</div>
+          </div>
+          <div class="elementor-element elementor-element-6f6719fc e-flex e-con-boxed e-con e-child" data-id="6f6719fc" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+            <div class="e-con-inner">
+            	<div style="text-align: left;color: #fff;">
+            		<h3 style="font-size: 18px;font-weight: 400;border-bottom: 1px solid white;padding-bottom: 10px;margin-bottom: 10px;">✅Dar adeus para aquela sensação de que ele pode te trair a qualquer momento com alguém mais jovem.</h3>
+
+            		<h3 style="font-size: 18px;font-weight: 400;border-bottom: 1px solid white;padding-bottom: 10px;margin-bottom: 10px;">✅Voltar a ter o desejo sexual necessário para uma vida mais alegre e feliz.</h3>
+
+            		<h3 style="font-size: 18px;font-weight: 400;border-bottom: 1px solid white;padding-bottom: 10px;margin-bottom: 10px;">✅Um passo a passo simples com resultados garantido e usado por mais de 5 mil mulheres.</h3>
+
+            		<h3 style="font-size: 18px;font-weight: 400;border-bottom: 1px solid white;padding-bottom: 10px;margin-bottom: 10px;">✅Uma vida com menos estresse, mais momentos felizes e relaxantes, que só são possíveis para mulheres com uma libido regulada.</h3>
+
+            		<h3 style="font-size: 18px;font-weight: 400;border-bottom: 1px solid white;padding-bottom: 10px;margin-bottom: 10px;">✅ Saber que problemas de saúde e problemas psicológicos provenientes de uma libido baixa vão passar longe de você.</h3>
+
+            		<h3 style="font-size: 18px;font-weight: 400;border-bottom: 1px solid white;padding-bottom: 10px;margin-bottom: 10px;">✅Saber que suas atividades favoritas não vão ser afetadas pelo estresse.</h3>
+
+            		<h3 style="font-size: 18px;font-weight: 400;border-bottom: 1px solid white;padding-bottom: 10px;margin-bottom: 10px;">✅Poder aproveitar os melhores momentos que a vida oferece ao lado da pessoa ou das pessoas que você mais gosta.</h3>
+            	</div>
+              
+
+            </div>
+            </div>       
+        </div>
+      </div>
+      <!-- FIM VANTAGENS DO PRODUTO -->
+
+      <!-- GIF DE COMO COMPRAR 
+      <div class="elementor-element elementor-element-34ddf927 e-flex e-con-boxed e-con e-parent" data-id="34ddf927" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-502e78cb elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="502e78cb" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">DÚVIDAS DE COMO COMPRAR NA INTERNET?</h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-d610652 elementor-widget elementor-widget-image" data-id="d610652" data-element_type="widget" data-widget_type="image.default">
+            <div class="elementor-widget-container">
+              <img decoding="async" width="790" height="358" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20790%20358'%3E%3C/svg%3E" class="attachment-large size-large wp-image-31" alt="" data-lazy-src="wp-content/uploads/2023/12/ezgif-4-6a0d81b8b9.gif" />
+              <noscript><img loading="lazy" decoding="async" width="790" height="358" src="wp-content/uploads/2023/12/ezgif-4-6a0d81b8b9.gif" class="attachment-large size-large wp-image-31" alt="" /></noscript>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-2587eda6 elementor-align-center elementor-mobile-align-justify elementor-hidden-desktop elementor-widget elementor-widget-button" data-id="2587eda6" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">QUERO COMPRAR AGORA </span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       FIM GIF DE COMPRAS -->
+
+       <!-- ECONOMIA -->
+      <div class="elementor-element elementor-element-322ac85b e-flex e-con-boxed e-con e-parent" data-id="322ac85b" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-5116995 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="5116995" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <img style="    max-width: 120px;" src="img/foguete.png">
+              <h2 class="elementor-heading-title elementor-size-default">Além de reascender sua Libido começando hoje...
+              </h2>
+              <br>
+              <h2 class="elementor-heading-title elementor-size-default" style="font-size:30px">Você ainda vai economizar <br><span style="color:#00cd00">200 reais!</span></h2><br>
+
+            </div>
+          </div>          
+          
+        </div>
+      </div>
+      <!-- ECONOMIA -->
+
+      <!-- OFERTA -->
+      <div class="elementor-element elementor-element-7da2ba7a e-flex e-con-boxed e-con e-parent" data-id="7da2ba7a" data-element_type="container" id="preco" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-420fa4ae elementor-widget elementor-widget-heading" data-id="420fa4ae" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              
+              <h2 class="elementor-heading-title elementor-size-default">CHEGOU A HORA DE DAR UM BASTA NA FALTA DE DESEJO SEXUAL</h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-5ab8a6e4 elementor-widget elementor-widget-heading" data-id="5ab8a6e4" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">Aproveite o preço promocional é por tempo limitado!</h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-78e0ae54 e-con-full e-flex e-con e-child" data-id="78e0ae54" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+            <div class="elementor-element elementor-element-592c127b e-con-full e-flex e-con e-child" data-id="592c127b" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+              <div class="elementor-element elementor-element-2dc36b91 e-con-full e-flex e-con e-child" data-id="2dc36b91" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                <div class="elementor-element elementor-element-5721553f elementor-widget elementor-widget-image" data-id="5721553f" data-element_type="widget" data-widget_type="image.default">
+                  <div class="elementor-widget-container">
+                    <img src="img/mockup.png">
+                  </div>
+                </div>
+              </div>
+              <div class="elementor-element elementor-element-7f40b823 e-con-full e-flex e-con e-child" data-id="7f40b823" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                <div class="elementor-element elementor-element-44ed80ee elementor-widget elementor-widget-heading" data-id="44ed80ee" data-element_type="widget" data-widget_type="heading.default">
+                  <div class="elementor-widget-container">
+                    <h2 class="elementor-heading-title elementor-size-default"><span style="color: red;">DE <s>227,00</s></span> POR APENAS:</h2>
+                  </div>
+                </div>
+                <div class="elementor-element elementor-element-afcbceb elementor-widget elementor-widget-heading" data-id="afcbceb" data-element_type="widget" data-widget_type="heading.default">
+                  <div class="elementor-widget-container">
+                    <h2 class="elementor-heading-title elementor-size-default"><span style="font-size: 50%;color:#000;">5X </span>5,89</h2>
+                  </div>
+                </div>
+                <div class="elementor-element elementor-element-32fc8731 elementor-widget elementor-widget-heading" data-id="32fc8731" data-element_type="widget" data-widget_type="heading.default">
+                  <div class="elementor-widget-container">
+                    <h2 class="elementor-heading-title elementor-size-default">OU R$27,00 À VISTA</h2>
+                  </div>
+                </div>
+                <img src="img/pay.png">
+                <div class="elementor-element elementor-element-47e58aa7 elementor-align-justify elementor-widget elementor-widget-button" data-id="47e58aa7" data-element_type="widget" data-widget_type="button.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-button-wrapper">
+
+
+                      <a class="elementor-button elementor-button-link elementor-size-sm" href="https://pay.kiwify.com.br/6nAIVTq">
+
+                        
+                      <span class="elementor-button-content-wrapper">
+                      <span class="elementor-button-text">QUERO AUMENTAR MINHA LIBIDO HOJE!</span>
+                      </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div style="font-family: 'Montserrat', Sans-serif;font-size: 16px;font-weight: 500;">
+                	<h3 style="font-size: 18px;font-weight: 800;text-align: center;">Resumo de tudo o que você vai receber:</h3>
+                	<p style="margin: 0;">✅ Rotina Libid+ de 21 dias</p>
+                	<p style="margin: 0;">✅ Rotina Alimentar Libid+</p>
+                	<p style="margin: 0;">✅ Rotina Física Libid+</p>
+                	<p style="margin: 0;">✅ Rotina Psicológica Libid+</p>
+                	<p style="margin: 0;">✅ <b>BÔNUS 1:</b> As 5 Receitas Proibidas </p>
+                	<p style="margin: 0;">✅ <b>BÔNUS 2:</b> A Massagem de Cleópatra</p>
+                	<p style="margin: 0;">✅ <b>BÔNUS 3:</b> A Arte da Conexão</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DA OFERTA -->
+
+      <!-- GARANTIA -->
+      <div class="elementor-element elementor-element-254661ef e-flex e-con-boxed e-con e-parent" data-id="254661ef" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-6e5ffc53 e-con-full e-flex e-con e-child" data-id="6e5ffc53" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+            <div class="elementor-element elementor-element-41777c5 elementor-widget elementor-widget-heading" data-id="41777c5" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <h2 class="elementor-heading-title elementor-size-default">SATISFAÇÃO GARANTIDA!</h2>
+              </div>
+            </div>
+            <div class="elementor-element elementor-element-147004d2 elementor-widget elementor-widget-heading" data-id="147004d2" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <h2 style="text-align: left" class="elementor-heading-title elementor-size-default">Caso esteja pensando…
+                	<br>
+                	<br>
+					"E se essa Rotina não funcionar para mim?"
+					<br>
+					<br>
+					Fique tranquila, nós confiamos tanto no produto que ao invés de dar 7 dias de garantia, que é o que todo mundo faz e inclusive é obrigatório por lei, nós te daremos <b>30 dias.</b>
+					<br>
+					<br>
+					Ou seja, você poderá <b>testar a Rotina Natural Libid+ por 30 dias</b> e ver com os próprios olhos os resultados que ele vai trazer para sua vida.
+					<br>
+					<br>
+					Mas se mesmo assim achar que essa Rotina personalizado de acordo com sua avaliação não é para você, basta entrar em contato conosco e <b>pedir seu dinheiro de volta. Devolvemos 100% do seu dinheiro no PIX, na mesma hora e sem enrolação.</b>
+                </h2>
+              </div>
+            </div>
+            <div class="elementor-element elementor-element-14631900 elementor-align-left elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="14631900" data-element_type="widget" data-widget_type="button.default">
+              <div class="elementor-widget-container">
+                <div class="elementor-button-wrapper">
+                  <a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+                  <span class="elementor-button-content-wrapper">
+                  <span class="elementor-button-text">Quero com garantia!</span>
+                  </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-5b6f540b e-con-full e-flex e-con e-child" data-id="5b6f540b" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+            <div class="elementor-element elementor-element-41d3bef2 elementor-widget elementor-widget-image" data-id="41d3bef2" data-element_type="widget" data-widget_type="image.default">
+              <div style="text-align:center;" class="elementor-widget-container">
+                <img style="width: 300px;" src="img/garantia.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DA GARANTIA -->
+
+      <!-- FAQ -->
+      <div class="elementor-element elementor-element-40c60e3e e-flex e-con-boxed e-con e-parent" data-id="40c60e3e" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-427d685b e-con-full e-flex e-con e-child" data-id="427d685b" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+            <div class="elementor-element elementor-element-72bbdf8a elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="72bbdf8a" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <h2 class="elementor-heading-title elementor-size-default">Perguntas que você pode estar fazendo nesse momento:</h2>
+              </div>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-2103d587 e-con-full e-flex e-con e-child" data-id="2103d587" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+            <div class="elementor-element elementor-element-450be1d6 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget elementor-widget-toggle" data-id="450be1d6" data-element_type="widget" data-widget_type="toggle.default">
+              <div class="elementor-widget-container">
+                <style>/*! elementor - v3.18.0 - 20-12-2023 */
+                  .elementor-toggle{text-align:left}.elementor-toggle .elementor-tab-title{font-weight:700;line-height:1;margin:0;padding:15px;border-bottom:1px solid #d5d8dc;cursor:pointer;outline:none}.elementor-toggle .elementor-tab-title .elementor-toggle-icon{display:inline-block;width:1em}.elementor-toggle .elementor-tab-title .elementor-toggle-icon svg{margin-inline-start:-5px;width:1em;height:1em}.elementor-toggle .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-right{float:right;text-align:right}.elementor-toggle .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-left{float:left;text-align:left}.elementor-toggle .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-closed{display:block}.elementor-toggle .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-opened{display:none}.elementor-toggle .elementor-tab-title.elementor-active{border-bottom:none}.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-closed{display:none}.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-opened{display:block}.elementor-toggle .elementor-tab-content{padding:15px;border-bottom:1px solid #d5d8dc;display:none}@media (max-width:767px){.elementor-toggle .elementor-tab-title{padding:12px}.elementor-toggle .elementor-tab-content{padding:12px 10px}}.e-con-inner>.elementor-widget-toggle,.e-con>.elementor-widget-toggle{width:var(--container-widget-width);--flex-grow:var(--container-widget-flex-grow)}
+                </style>
+                <div class="elementor-toggle">
+                  <div class="elementor-toggle-item">
+                    <div id="elementor-tab-title-1151" class="elementor-tab-title" data-tab="1" role="button" aria-controls="elementor-tab-content-1151" aria-expanded="false">
+                      <a class="elementor-toggle-title" tabindex="0">O que é a Rotina Natural Libid+ ?</a>
+                    </div>
+                    <div id="elementor-tab-content-1151" class="elementor-tab-content elementor-clearfix" data-tab="1" role="region" aria-labelledby="elementor-tab-title-1151">A Rotina Natural Libid+ é um passo a passo criado para aumentar os níveis de libido em 21 dias. Ele é composto por 3 etapas que são divididas em 21 dias de acompanhamento.</div>
+                  </div>
+
+                  <div class="elementor-toggle-item">
+                    <div id="elementor-tab-title-1152" class="elementor-tab-title" data-tab="2" role="button" aria-controls="elementor-tab-content-1152" aria-expanded="false">
+                      <a class="elementor-toggle-title" tabindex="0">O que vou receber?</a>
+                    </div>
+                    <div id="elementor-tab-content-1152" class="elementor-tab-content elementor-clearfix" data-tab="2" role="region" aria-labelledby="elementor-tab-title-1152">Assim que você confirmar o pagamento da Rotina Natural Libid +, você receberá um E-mail com acesso ao conteúdo, e além disso, receberá acesso a uma plataforma VIP onde encontrará todo o cronograma passo a passo para começar ainda hoje.</div>
+                  </div>
+
+                  <div class="elementor-toggle-item">
+                    <div id="elementor-tab-title-1153" class="elementor-tab-title" data-tab="3" role="button" aria-controls="elementor-tab-content-1153" aria-expanded="false">
+                      <a class="elementor-toggle-title" tabindex="0">O que acontece depois que fizer minha inscrição?</a>
+                    </div>
+                    <div id="elementor-tab-content-1153" class="elementor-tab-content elementor-clearfix" data-tab="3" role="region" aria-labelledby="elementor-tab-title-1153">Depois de fazer sua inscrição, você receberá o acesso em seu e-mail em menos de 1 minuto após o pagamento. Se você não receber, verifique sua caixa de spam. Se ainda não estiver lá, basta entrar em contato com nossa equipe de suporte ao cliente! (você receberá nosso contato exclusivo para clientes assim que fizer a compra)</div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="elementor-element elementor-element-23b2a20f elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget elementor-widget-toggle" data-id="23b2a20f" data-element_type="widget" data-widget_type="toggle.default">
+              <div class="elementor-widget-container">
+                <div class="elementor-toggle">
+                  <div class="elementor-toggle-item">
+                    <div id="elementor-tab-title-5981" class="elementor-tab-title" data-tab="1" role="button" aria-controls="elementor-tab-content-5981" aria-expanded="false">
+                      <a class="elementor-toggle-title" tabindex="0">Quanto tempo para ter resultados?</a>
+                    </div>
+                    <div id="elementor-tab-content-5981" class="elementor-tab-content elementor-clearfix" data-tab="1" role="region" aria-labelledby="elementor-tab-title-5981">Nossa estimativa de resultados é que em 21 dias você já tenha recuperado por completo a sua libido. Porém temos casos incríveis de mulheres que conseguiram grandes resultados em menos de 15 dias, e mulheres que alcançaram isso em pouco mais de um mês. Tudo vai depender da sua dedicação em seguir o método corretamente.</div>
+                  </div>
+
+                  <div class="elementor-toggle-item">
+                    <div id="elementor-tab-title-5982" class="elementor-tab-title" data-tab="2" role="button" aria-controls="elementor-tab-content-5982" aria-expanded="false">
+                      <a class="elementor-toggle-title" tabindex="0">Funciona para mim?</a>
+                    </div>
+                    <div id="elementor-tab-content-5982" class="elementor-tab-content elementor-clearfix" data-tab="2" role="region" aria-labelledby="elementor-tab-title-5982">Se você seguir os exercícios e fizer o cronograma corretamente, pode ter certeza que alcançará resultados incríveis e vai ver o seu desejo sexual renovado.</div>
+                  </div>
+
+                  <div class="elementor-toggle-item">
+                    <div id="elementor-tab-title-5983" class="elementor-tab-title" data-tab="3" role="button" aria-controls="elementor-tab-content-5983" aria-expanded="false">
+                      <a class="elementor-toggle-title" tabindex="0">Tem contraindicações?</a>
+                    </div>
+                    <div id="elementor-tab-content-5983" class="elementor-tab-content elementor-clearfix" data-tab="3" role="region" aria-labelledby="elementor-tab-title-5983">Não. Nosso método é completamente natural, sem a necessidade de remédios, hormônios ou suplementos. No entanto, caso você possua alguma complicação de saúde recomendamos sempre consultar o seu médico.</div>                    
+                  </div>
+
+                  <div class="elementor-toggle-item">
+                    <div id="elementor-tab-title-5983" class="elementor-tab-title" data-tab="4" role="button" aria-controls="elementor-tab-content-5983" aria-expanded="false">
+                      <a class="elementor-toggle-title" tabindex="0">O que vou receber acesso?</a>
+                    </div>
+                    <div id="elementor-tab-content-5983" class="elementor-tab-content elementor-clearfix" data-tab="4" role="region" aria-labelledby="elementor-tab-title-5983">Em menos de 1 minuto após o pagamento você receberá em seu email a Rotina Natural Libid+ completo desenvolvido de acordo com sua avaliação. E você terá acesso ao treinamento pelo período de 1 ano no seu computador ou celular.</div>                    
+                  </div>
+
+                  <div class="elementor-toggle-item">
+                    <div id="elementor-tab-title-5983" class="elementor-tab-title" data-tab="5" role="button" aria-controls="elementor-tab-content-5983" aria-expanded="false">
+                      <a class="elementor-toggle-title" tabindex="0">Quais as formas de pagamento?</a>
+                    </div>
+                    <div id="elementor-tab-content-5983" class="elementor-tab-content elementor-clearfix" data-tab="5" role="region" aria-labelledby="elementor-tab-title-5983">Pix ou cartão de crédito parcelado em até 5x.</div>                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="elementor-element elementor-element-77161c2a elementor-widget elementor-widget-html" data-id="77161c2a" data-element_type="widget" data-widget_type="html.default">
+              <div class="elementor-widget-container">
+                <style>
+                  .elementor-tab-title{
+                  border-radius: 5px;
+                  z-index: 1 !important;
+                  }
+                  .elementor-tab-content{
+                  border-radius: 0 0 5px 5px;
+                  margin-top: -5px;
+                  z-index: -1 !important;
+                  }
+                  .pulse{
+                  animation: pulsar 2s infinite;
+                  }
+                  @keyframes pulsar{
+                  0%, 100%{
+                  transform: scale(1);
+                  }
+                  50%{
+                  transform: scale(0.95);
+                  }
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DO FAQ -->
+
+
+      <!-- FOOTER -->
+      <div class="elementor-element elementor-element-4db1d267 e-flex e-con-boxed e-con e-parent" data-id="4db1d267" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-4d1aa615 elementor-widget elementor-widget-heading" data-id="4d1aa615" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">LIBID+ ©  2024 Todos os direitos reservados.</h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-4c49498f elementor-widget elementor-widget-html" data-id="4c49498f" data-element_type="widget" data-widget_type="html.default">
+            <div class="elementor-widget-container">
+              <style>
+                html, body{
+                width: 100%;
+                overflow-x:hidden;
+                }
+                .elementor-button {
+                animation-name: pulse;
+                -webkit-animation-name: pulse;
+                animation-duration: 1.5s;
+                -webkit-animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+                -webkit-animation-iteration-count: infinite;
+                }
+                .entenda {
+                animation-name: pulse;
+                -webkit-animation-name: pulse;
+                animation-duration: 1.5s;
+                -webkit-animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+                -webkit-animation-iteration-count: infinite;
+                }
+                @keyframes pulse {
+                0%,
+                100% {
+                transform: scale(.95);
+                border-radius: 5px;
+                }
+                50% {
+                transform: scale(1);
+                opacity: 100;
+                border-radius: 25px;
+                box-shadow: 10px 10px 20px rgba(0,0,0,.2);
+                }
+                }
+                @-webkit-keyframes pulse {
+                0%,
+                100% {
+                -webkit-transform: scale(.95);
+                opacity: 100;
+                border-radius: 5px;
+                }
+                50% {
+                -webkit-transform: scale(1);
+                opacity:100;
+                border-radius: 25px;
+                box-shadow: 10px 10px 20px rgba(0,0,0,.2);
+                }
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIM DO FOOTER -->
+
+
+      <!--
+      <div class="elementor-element elementor-element-336f25d3 elementor-hidden-desktop e-flex e-con-boxed e-con e-parent" data-id="336f25d3" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;position&quot;:&quot;fixed&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-6effca96 elementor-align-center elementor-mobile-align-justify elementor-hidden-desktop elementor-widget elementor-widget-button" data-id="6effca96" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">Comprar agora!</span>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+    </div>
+    <script id="rocket-browser-checker-js-after">
+      "use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+    </script>
+    <script id="rocket-preload-links-js-extra">
+      var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/labopt.fengilib.fun","onHoverDelay":"100","rateThrottle":"3"};
+    </script>
+    <script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+      (function() {
+      "use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("https://labopt.fengilib.fun/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("https://labopt.fengilib.fun/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+      }());
+    </script>
+ 
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.18.3" id="elementor-webpack-runtime-js"></script>
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.18.3" id="elementor-frontend-modules-js"></script>
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js"></script>
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" id="wp-hooks-js"></script>
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
+    <script type="rocketlazyloadscript" id="wp-i18n-js-after">
+      wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+    </script>
+
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+    <script type="rocketlazyloadscript" id="elementor-frontend-js-before">
+      var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselWrapperAriaLabel":"Carrossel | Rolagem horizontal: Setas para esquerda e direita","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Retrato em dispositivos m\u00f3veis","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Paisagem em dispositivos m\u00f3veis","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Retrato em tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Paisagem em tablet","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.18.3","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"block_editor_assets_optimize":true,"landing-pages":true,"e_image_loading_optimization":true,"e_global_styleguide":true,"page-transitions":true,"notes":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/labopt.fengilib.fun\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_footer_logo_type":"logo"},"post":{"id":12,"title":"PV%20-Fengilib%20%E2%80%93%20Perfect%20%E2%80%93%20Fengilib%20%20Perfect","excerpt":"","featuredImage":false}};
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-src="https://labopt.fengilib.fun/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.18.3" id="elementor-frontend-js"></script>
+
+    <script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+      if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+      images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+      if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)
+    </script><script data-no-minify="1" async src="wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>	<script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script>
+  
+
+
+  </body>
+</html>
