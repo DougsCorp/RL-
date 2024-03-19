@@ -447,8 +447,21 @@ src="https://www.facebook.com/tr?id=933547891724511&ev=PageView&noscript=1"/>
     };
 
     function redirect() {
-      location.href = "resultado.html?utm_source=[utm_source]&utm_campaign=[utm_campaign]&utm_medium=[utm_medium]"
+      // Obtém os parâmetros da URL atual
+      var urlParams = new URLSearchParams(window.location.search);
+      
+      // Obtém os valores dos parâmetros da URL atual
+      var utm_source = urlParams.get('utm_source');
+      var utm_campaign = urlParams.get('utm_campaign');
+      var utm_medium = urlParams.get('utm_medium');
+    
+      // Constrói a nova URL de destino com os parâmetros da URL atual
+      var newURL = "resultado.html?utm_source=" + utm_source + "&utm_campaign=" + utm_campaign + "&utm_medium=" + utm_medium;
+    
+      // Redireciona para a nova URL
+      window.location.href = newURL;
     }
+    
     function TextoUm(){
       document.getElementById("load").innerHTML = "Calculando seu resultado...";
     }
